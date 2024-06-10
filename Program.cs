@@ -35,7 +35,7 @@ namespace OrmLiteTest
 
             var query = OrmLiteConfig.DialectProvider.SqlExpression<Pet>()
                 .Where(x => x.Type == petType)
-                .And(x => Sql.In(x.Id, subQuery));
+                .And(x => Sql.In(x.OwnerId, subQuery));
 
             Console.WriteLine();
             Console.WriteLine("Main Query Parameters:");
